@@ -346,11 +346,7 @@ position: relative;
 @media(min-width:1120px){
     .menu-services{
         display: flex;
-        /* flex-wrap: wrap; */
         margin: 0px 0px 19px 0px ;
-    }
-    .menu-services__item:last-child{
-        /* padding: 14px 9px 0px 16px; */
     }
     .services__text{
         min-width: 490px;
