@@ -294,10 +294,11 @@ position: relative;
 }
 .services__image{
 }
-.services__image--laptop-image,
-.services__image--desktop-image{
-    display: none;
+.services__image img{
+    width: 100%;
+    height: 100%;
 }
+
 .menu-services__link{
 
 }
@@ -307,6 +308,9 @@ position: relative;
 }
 
 @media(min-width:768px){
+    .services__image {
+        flex: 0 0 360px;
+}
     .services__main-content{
         display: flex;
         flex-direction: row;
@@ -324,17 +328,7 @@ position: relative;
     }
     .services__text{
         max-width: 312px;
-    }
-    .services__image--laptop-image{
-        display: block;
-    }
-    .services__image--laptop-image img{
-        border-radius: 8px;
-    }
-    .services__image--mini-image{
-        display: none;
-    }
-    
+    }  
 }
 @media (min-width: 780px){
     .services__text {
@@ -351,22 +345,6 @@ position: relative;
     }
     .services__text{
         min-width: 490px;
-    }
-    .services__text--laptop-text{
-        display: none;
-    }
-    .services__text--desktop-text{
-        display: block;
-    }
-    .services__image--laptop-image{
-        display: none;
-    }
-    .services__image--desktop-image{
-        display: block;
-        max-width: 530px;
-    }
-    .services__image--desktop-image img{
-        border-radius: 8px;
     }
     .services__description-content {
         padding: 0;
