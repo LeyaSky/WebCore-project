@@ -1,0 +1,136 @@
+
+.aside{
+    min-width:300px;
+    height: 100%;
+    width: 300px;
+    flex-wrap: nowrap;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+}
+
+.aside__container {
+
+}
+.aside__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFF;;
+    height: 1024px;
+}
+.aside__main{
+    display: flex;
+    flex-direction: column;
+}
+.aside__header {
+}
+.header-aside {
+    margin: 0px 0px 50px 0px;
+}
+.header-aside__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 16px 0px;
+}
+.header-aside__item {
+}
+.header-aside__item:first-child{
+    display: flex;
+}
+.header-aside__burger-close {
+    margin: 0px 16px 0px 0px;
+    align-self: center;
+}
+.header-aside__logo {
+}
+.logo {
+}
+.header-aside__search {
+}
+.aside__services {
+}
+.aside__menu-list {
+    margin: 0px 0px 0px 24px;
+}
+.aside__menu-list li:not(:last-child){
+    margin: 0px 0px 32px 0px;
+}
+.aside__menu-list-item a{
+    color: #1B1C21;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+};
+.aside__menu-list-link {
+
+}
+.aside__menu-list-item .active-link{
+
+}
+.active-link{
+    position: relative;
+}
+.active-link a{
+    color: #7E7E82;
+}
+
+.active-link::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 0;
+    width: 4px;
+    height: 40px;
+    background-image: url('img/highlight.svg');
+}
+.aside__footer {
+}
+.footer-aside {
+    margin: 0px 24px 32px;
+}
+.footer-aside__links {
+    margin: 0px 0px 12px 0px;
+}
+.footer-aside__link {
+}
+.footer-aside__link:not(:last-child){
+    margin: 0px 16px 0px 0px;
+}
+.footer-aside__contacts {
+    margin: 0px 0px 40px 0px;
+}
+.footer-aside__email {
+    margin: 0px 0px 12px 0px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+.footer-aside__mobile {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+}
+.footer-aside__languages {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+.footer-aside__ru {
+}
+.footer-aside__en {
+}
+.footer-aside__ch {
+} 
+.active-lang{
+    color: #7E7E82 !important;
+}
+
+@media(min-width:769px){
+    .aside{
+        box-shadow: none;
+    }
+}
