@@ -1,0 +1,89 @@
+*,*::before,*::after{padding: 0;margin: 0;border: 0;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display: block;}
+a{text-decoration: none;}
+ul,ol,li{list-style: none;}
+h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size:inherit;}
+html{box-sizing: border-box;height:100%;width: 100%;font-size: 100%;-ms-text-size-adjust: 100%; overflow-x: hidden;}
+input,button,textarea{font-family: inherit;}
+input::-ms-clear{display:none}
+button{cursor:pointer}
+button::-moz-focus-inner{ padding:0; border:0;}
+a,a:visited{text-decoration: none; color: inherit}
+a:hover{text-decoration: none;}
+img{vertical-align: top;}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+body{
+    background-color: #F8F8F8 ;
+}
+.brands {
+
+}
+.brands__container {
+}
+.section__header {
+    color: #7E7E82;
+    padding:16px;   
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+}
+.brands__header {
+}
+.section__shadow-container {
+    background: linear-gradient(270deg, #FFF 0%, #F8F8F8 100%);
+}
+.brands__shadow-container {
+}
+.section__header {
+}
+.brands__header {
+}
+.brands__main {
+}
+.main-brands {
+}
+.main-brands__items::after{
+    content: '';
+    position: absolute;
+    left:100%;
+    top:0%;
+    margin: 0px 0px 0px -24px;
+    width: 24px;
+    height: 92px;
+    background: linear-gradient(270deg, #F8F8F8 0.04%, rgba(248, 248, 248, 0.00) 100%);
+    /* background-color: peru; */
+}
+.main-brands__items {
+    position: relative;
+    margin: 16px 0px 16px 16px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}   
+.main-brands__item{
+    background-color: #fff;
+    min-width: 240px;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    margin: 0px 16px 0px 0px;
+}
+.main-brands__item--body {
+    padding: 20px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-brands__logo {
+}
+.main-brands__svg {
+}
