@@ -91,7 +91,7 @@ body{
     min-width: 0;
     margin: 0px 16px 16px 0px; /**/
 }
-.main-brands__item:not(:nth-child(-n + 8)){
+.hidden > .main-brands__item:not(:nth-child(-n + 8)){
     display: none;
 }
 .main-brands__item--body {
@@ -122,6 +122,54 @@ position: static !important;
     background-color: #B5B6BC;
 }
 
+.main-brands__button--hide{
+    display:none;
+    top:300px;
+}
+
+
+
+.main-brands__button{
+    position: absolute;
+    left: 30px;
+    color: #1B1C21;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.2px;
+    background: none;
+    margin: 0px 0px 0px 0px;
+}
+
+.main-brands__button--show{
+    top: 210px;
+}
+
+
+.main-brands__button--show::before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top:0px;
+    left: -30px;
+    background-image: url(img/read-more.svg);
+}
+
+.main-brands__button--hide::before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top:0px;
+    left: -30px;
+    background-image: url(img/read-less.svg);
+}
+
+.hiddenBtn{
+    display: none;
+}
  @media(min-width: 768px){
     .swiper{
         display: none !important;
@@ -153,9 +201,12 @@ position: static !important;
     .main-brands__items--wide {
         margin: 16px 0px 16px 14px;
     }
-    .main-brands__item:not(:nth-child(-n + 6)){
+    .hidden > .main-brands__item:not(:nth-child(-n + 6)){
         display: none;
     } 
+    .main-brands__button--hide{
+        top:400px;
+    }
 
 }
 
@@ -185,33 +236,6 @@ position: static !important;
     }
 }
 
-
-.main-brands__button{
-    /* justify-self: flex-start; */
-    margin: 0px 0px 0px 0px;
-    display: block;
-}
-.main-brands__button{
-    position: absolute;
-    top: 210px;
-    left: 30px;
-    color: #1B1C21;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-    letter-spacing: -0.2px;
-    background: none;
-}
-.main-brands__button::before{
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top:0px;
-    left: -30px;
-    background-image: url(img/read-more.svg);
-}
 
 @media(min-width:767px){
     .main-brands__item--first{

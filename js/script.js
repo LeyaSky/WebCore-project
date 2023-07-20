@@ -20,5 +20,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // wideDevicesBrands.forEach(element => {
     //     element.classList.add('.main-brands__item--wide');
     // });
+
+// function hideShowButton(box,btn){
+//     if(!box.classList.contains('hidden')){
+//         btn.style.display = 'none';
+//     } 
+// }
+// function showHideButton(box,btn){
+//     if (box.classList.contains('hidden')){
+//         btn.style.display = 'block';
+//         console.log(btn.classList);
+//     }
+// }
+
+// +(function showHiddenBrands() {
+//     const showBtn = document.querySelector('.main-brands__button--show');
+//     const hideBtn = document.querySelector('main-brands__button--hide');
+//     const brandsBox = document.querySelector('.main-brands__items--wide'); 
+//     showBtn.addEventListener('click', () => {
+//         brandsBox.classList.toggle('hidden');
+//         hideShowButton(brandsBox, showBtn);
+//         showHideButton(brandsBox, hideBtn);
+//     })
+// })();
+
++(function showHideContent(){
+    const showBtn = document.querySelector('.main-brands__button--show');
+    console.log(showBtn);
+    const hideBtn = document.querySelector('.main-brands__button--hide');
+    console.log(hideBtn);
+    const brandsBox = document.querySelector('.main-brands__items--wide'); 
+    showBtn.addEventListener('click', () => {
+        brandsBox.classList.remove('hidden');
+        showBtn.style.display = 'none'
+        // showBtn.classList.add('hiddenBtn');
+        // hideBtn.classList.remove('hiddenBtn');
+        hideBtn.style.display = 'block';
+    });
+    hideBtn.addEventListener('click', () => {
+        brandsBox.classList.add('hidden');
+        // showBtn.classList.remove('hiddenBtn');
+        // hideBtn.classList.add('hiddenBtn');
+        showBtn.style.display = 'block';
+        hideBtn.style.display = 'none';
+    });
+})();
+
 });
 
