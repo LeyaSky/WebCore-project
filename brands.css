@@ -26,6 +26,7 @@ body{
 
 }
 .brands__container {
+    max-width: none !important;
 }
 .section__header {
     color: #7E7E82;
@@ -37,7 +38,8 @@ body{
     letter-spacing: -0.2px;
     text-transform: uppercase;
 }
-.brands__header {
+.brands__header.section__header{
+    padding: 16px 16px 16px 32px;
 }
 .section__shadow-container {
     background: linear-gradient(270deg, #FFF 0%, #F8F8F8 100%);
@@ -45,45 +47,175 @@ body{
 .brands__shadow-container {
 }
 .section__header {
+    position: relative;
 }
 .brands__header {
 }
+
+
 .brands__main {
 }
 .main-brands {
 }
-.main-brands__items::after{
+.main-brands::after{
     content: '';
     position: absolute;
     left:100%;
-    top:0%;
+    top:0;
     margin: 0px 0px 0px -24px;
     width: 24px;
-    height: 92px;
+    height: 72px;
     background: linear-gradient(270deg, #F8F8F8 0.04%, rgba(248, 248, 248, 0.00) 100%);
     /* background-color: peru; */
+    z-index:100;
 }
 .main-brands__items {
-    position: relative;
-    margin: 16px 0px 16px 16px;
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
+    margin: 16px 0px 16px 32px;
+    min-width: 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 16px;
+    justify-items: center;  -----------
 }   
+.main-brands__items--wide{
+    max-width: 1120px;
+    margin: 16px 32px 24px 32px;
+}
 .main-brands__item{
+    box-sizing: border-box;
     background-color: #fff;
-    min-width: 240px;
     border-radius: 6px;
     border: 1px solid #EAEAEA;
-    margin: 0px 16px 0px 0px;
+    max-height: 72px;
+    min-width: 0;
+    margin: 0px 16px 16px 0px; /**/
+}
+.main-brands__item:not(:nth-child(-n + 8)){
+    display: none;
 }
 .main-brands__item--body {
-    padding: 20px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 16px 0px 16px;
 }
 .main-brands__logo {
 }
-.main-brands__svg {
+.main-brands__svg{
+    padding: 16px 0px 16px 0px;
+}
+.main-brands__svg svg{
+    vertical-align: middle;
+}
+
+
+.main-brands .swiper-pagination{
+position: static !important;
+}
+
+.main-brands .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    line-height: 20px;
+    font-size: 14px;
+    background-color: #B5B6BC;
+}
+
+ @media(min-width: 768px){
+    .swiper{
+        display: none !important;
+    }
+    .main-brands__item{
+        width: 240px;
+    }
+    .main-brands__items--wide{
+    }
+    .main-brands::after{
+        display: none;
+    }
+}
+
+@media(max-width:767px){
+    .main-brands__items--wide{
+        display: none;
+    }
+    .main-brands__button{
+        display: none;
+    }
+}
+
+@media(max-width: 1044px){
+    .main-brands__items{
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+    .main-brands__items--wide {
+        margin: 16px 0px 16px 14px;
+    }
+    .main-brands__item:not(:nth-child(-n + 6)){
+        display: none;
+    } 
+
+}
+
+@media(max-width: 816px){
+    .main-brands__item{
+        width: 224px;
+    }
+    .brands__header.section__header {
+        padding: 16px 16px 16px 24px;
+    }
+}
+
+@media(max-width:766px){
+    .main-brands__items {
+        margin: 16px 0px 16px 16px;
+    }
+}
+@media(max-width:537px){
+    .brands__header.section__header {
+        padding: 16px 16px 16px 16px;
+    }
+}
+
+@media(min-width: 1200px){
+    .main-brands__items--wide{
+        margin: 16px  auto 24px auto;
+    }
+}
+
+
+.main-brands__button{
+    /* justify-self: flex-start; */
+    margin: 0px 0px 0px 0px;
+    display: block;
+}
+.main-brands__button{
+    position: absolute;
+    top: 210px;
+    left: 30px;
+    color: #1B1C21;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.2px;
+    background: none;
+}
+.main-brands__button::before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top:0px;
+    left: -30px;
+    background-image: url(img/read-more.svg);
+}
+
+@media(min-width:767px){
+    .main-brands__item--first{
+        position: relative;
+    }
+    
 }
